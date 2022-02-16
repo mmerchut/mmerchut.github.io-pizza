@@ -1,0 +1,386 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  max-width: 1920px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "pizza-icon1 pizza-icon2 pizza-icon3"
+    "header header header"
+    "style-row style-row style-row"
+    "about about about"
+    "more-info more-info more-info"
+    "end end end"
+    "newsletter newsletter newsletter"
+    "footer footer footer";
+  font-size: 14px;
+}
+
+nav {
+  grid-area: nav;
+  font-size: 17px;
+}
+
+.menu {
+  display: none;
+}
+
+.logo,
+.nav-link {
+  display: inline-block;
+  margin: 20px;
+}
+
+.logo {
+  float: left;
+  font-weight: 800;
+  cursor: pointer;
+}
+.nav-link {
+  float: right;
+  color: rgb(136, 130, 130);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: rgb(43, 41, 41);
+}
+
+#main {
+  grid-area: main;
+  background-image: url("img/background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-left: 50px;
+  margin-bottom: 130px;
+  height: 600px;
+}
+
+.main-text {
+  width: 30%;
+  padding-top: 290px;
+  padding-left: 90px;
+}
+
+.main-text > h2 {
+  color: rgb(51, 50, 50);
+}
+
+.main-text > h4 {
+  color: rgb(136, 130, 130);
+}
+
+.main-btn {
+  border: none;
+  padding: 20px 50px;
+  background-color: rgb(243, 116, 42);
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.main-btn:hover {
+  background-color: rgb(238, 236, 228);
+  color: #000;
+}
+
+#pizza-icon-1 {
+  grid-area: pizza-icon1;
+  text-align: center;
+  color: rgb(59, 56, 56);
+}
+
+#pizza-icon-2 {
+  grid-area: pizza-icon2;
+  text-align: center;
+  color: rgb(59, 56, 56);
+}
+
+#pizza-icon-3 {
+  grid-area: pizza-icon3;
+  text-align: center;
+  color: rgb(59, 56, 56);
+}
+
+.fa-solid {
+  font-size: 40px;
+  color: rgb(184, 179, 179);
+  cursor: pointer;
+}
+
+.fa-solid:hover {
+  transition: 0.2s;
+  color: rgb(243, 116, 42);
+}
+
+#header {
+  grid-area: header;
+  text-align: center;
+  margin-top: 70px;
+}
+
+#style-row {
+  grid-area: style-row;
+  text-align: center;
+}
+
+.style-tile {
+  display: inline-block;
+  width: 20%;
+  margin: 50px;
+  height: 300px;
+  background-color: rgb(231, 227, 227);
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.style-tile:hover {
+  background-color: rgb(243, 116, 42);
+}
+
+.style-tile > h4 {
+  margin-top: 90px;
+  color: rgb(59, 56, 56);
+}
+
+.style-tile > p {
+  color: rgb(71, 67, 67);
+}
+
+#about {
+  grid-area: about;
+  margin-top: 100px;
+  padding-right: 20px;
+  background-color: rgb(233, 157, 70);
+}
+
+.about-img {
+  text-align: center;
+}
+
+.about-img > img {
+  float: left;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.about-h2 {
+  padding-top: 150px;
+  margin: 0;
+}
+
+#more-info {
+  grid-area: more-info;
+  background-image: url("img/oven.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgb(199, 196, 196);
+  padding-left: 50px;
+  margin-bottom: 130px;
+  min-height: 500px;
+}
+
+.info-text {
+  width: 40%;
+  padding-top: 190px;
+  padding-left: 90px;
+}
+
+.info-text > h2 {
+  color: rgb(51, 50, 50);
+}
+
+.info-text > h4 {
+  color: rgb(136, 130, 130);
+}
+
+#header > h1 {
+  color: rgb(51, 50, 50);
+}
+
+#header > h3 {
+  color: rgb(136, 130, 130);
+}
+
+#end {
+  grid-area: end;
+  text-align: center;
+}
+
+#newsletter {
+  grid-area: newsletter;
+}
+
+.contact-box {
+  text-align: center;
+  padding-top: 80px;
+  background-color: rgb(248, 238, 238);
+  min-height: 700px;
+}
+
+.contact-form {
+  display: inline-block;
+}
+
+.contact-input {
+  display: block;
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid rgb(56, 50, 50);
+  color: rgb(117, 111, 111);
+  background-color: rgb(248, 238, 238);
+}
+
+.contact-info {
+  display: inline-block;
+  margin-bottom: 70px;
+  color: rgb(55, 57, 58);
+}
+
+.btn-newsletter {
+  padding: 15px 50px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(192, 176, 176);
+  transition: 0.2s;
+}
+
+.btn-newsletter:hover {
+  background-color: rgb(126, 120, 120);
+}
+
+footer {
+  grid-area: footer;
+  font-size: 30px !important;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  transition: 0.2s;
+  background-color: rgb(161, 158, 158);
+}
+footer > .fa-brands:hover {
+  color: rgb(243, 116, 42);
+}
+footer > .fa-solid {
+  font-size: 30px;
+  color: #000;
+}
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav"
+      "main"
+      "pizza-icon1"
+      "pizza-icon2"
+      "pizza-icon3"
+      "header"
+      "header"
+      "header"
+      "style-row"
+      "about"
+      "more-info"
+      "end"
+      "newsletter"
+      "footer";
+    font-size: 14px;
+  }
+  .nav-link {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    float: right;
+    font-size: 30px;
+    line-height: 64px;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  #main {
+    height: 300px;
+    padding-left: 0px;
+    background-position: right;
+  }
+
+  .main-text {
+    width: 40%;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .style-tile {
+    margin: auto;
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    background-color: rgb(231, 227, 227);
+    margin: 0px;
+  }
+
+  .style-tile > h4 {
+    margin-top: 10px;
+    padding-top: 70px;
+    color: rgb(59, 56, 56);
+  }
+
+  #about {
+    padding-right: 0px;
+  }
+
+  .about-img {
+    padding-bottom: 50px;
+  }
+  .about-img > img {
+    width: 100%;
+
+    border-radius: 0px;
+  }
+
+  .about-h2 {
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  .info-text {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin: auto;
+  }
+
+  #more-info {
+    min-height: 200px;
+    padding-left: 0px;
+    background-color: #fff;
+    margin-bottom: 0;
+    background-image: none;
+  }
+
+  #end > img {
+    display: block;
+  }
+}
